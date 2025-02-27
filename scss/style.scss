@@ -1,7 +1,9 @@
+@import './base/colors';
+@import './base/global';
+@import './base/utilities.scss';
+
 @import './layout/header';
 @import './layout/main';
 @import './layout/footer';
 
-body {
-  background-color: #000;
-}
+@import './components/slick-slider';

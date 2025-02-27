@@ -1,0 +1,51 @@
+.slick-slider {
+  margin: 0 -12px;
+}
+
+.slick-slide {
+  padding: 0 12px;
+}
+
+.slick-dots {
+  display: flex;
+  align-items: center;
+  order: 2;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    margin-bottom: 0;
+    height: 8px;
+
+    &.slick-active button {
+      background-color: var(--red);
+    }
+  }
+
+  button {
+    border: 0;
+    border-radius: 50%;
+    min-width: auto;
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    background-color: var(--grey);
+    font-size: 0;
+  }
+}
+
+.slick-arrow {
+  border: none;
+  padding: 0;
+
+  &.slick-prev {
+    order: 1;
+  }
+
+  &.slick-next {
+    order: 3;
+  }
+}
