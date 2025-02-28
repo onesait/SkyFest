@@ -1,0 +1,20 @@
+.site-footer {
+  &__top {
+    border-top: 1px solid var(--light-gray);
+    padding: 48px 0;
+  }
+
+  &__bottom {
+    padding: 24px 0;
+    background-color: var(--light-gray);
+  }
+
+  &__copyright {
+    @include fs-16;
+  }
+
+  &__policy {
+    @include fs-16;
+    margin-left: auto;
+  }
+}

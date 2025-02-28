@@ -39,6 +39,7 @@
 
 .slick-arrow {
   border: none;
+  min-width: auto;
   padding: 0;
 
   &.slick-prev {
@@ -47,5 +48,9 @@
 
   &.slick-next {
     order: 3;
+  }
+
+  &:hover {
+    background-color: transparent;
   }
 }

@@ -1,4 +1,5 @@
 @import './base/colors';
+@import './base/mixins';
 @import './base/global';
 @import './base/utilities.scss';
 
@@ -7,3 +8,10 @@
 @import './layout/footer';
 
 @import './components/slick-slider';
+@import './components/announcement';
+@import './components/advantages';
+@import './components/about';
+@import './components/portfolio';
+@import './components/clients';
+@import './components/reviews';
+@import './components/seo-block';

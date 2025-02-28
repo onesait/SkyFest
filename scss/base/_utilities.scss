@@ -18,6 +18,10 @@
   padding-bottom: 96px;
 }
 
+.text-red {
+  color: var(--red);
+}
+
 @media (max-width: 767px) {
   .ptb-96 {
     padding-top: 48px;

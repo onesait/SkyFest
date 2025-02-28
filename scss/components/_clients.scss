@@ -1,0 +1,27 @@
+.clients {
+  background-color: var(--light-gray);
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__item-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    padding: 16px;
+    background-color: var(--white);
+  }
+
+  &__item-img {
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  &__arrows {
+    display: flex;
+    gap: 24px;
+    margin: 32px 0 0 auto;
+  }
+}

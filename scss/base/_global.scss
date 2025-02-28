@@ -2,12 +2,6 @@
   color-scheme: light only;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -64,6 +58,7 @@ button,
   justify-content: center;
   transition: .4s ease;
   border: 1px solid var(--red);
+  min-width: 196px;
   padding: 14px 23px;
   background-color: transparent;
   font-weight: 500;
@@ -101,4 +96,8 @@ input {
   &::placeholder {
     color: var(--grey);
   }
+}
+
+p {
+  margin-bottom: 8px;
 }

@@ -1,0 +1,25 @@
+.site-header {
+  position: sticky;
+  z-index: 9;
+  top: 0;
+  padding: 16px 0;
+  background-color: var(--white);
+
+  &__phone {
+    @include fs-20;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    font-weight: 500;
+
+    &::before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      background: url("../img/global/phone-24-red.svg");
+    }
+  }
+
+
+}

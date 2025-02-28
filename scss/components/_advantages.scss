@@ -1,0 +1,17 @@
+.advantages {
+  padding: 24px 0;
+  background-color: var(--light-gray);
+
+  &__item-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__item-text {
+    @include fs-20;
+    padding-right: .9vw;
+    font-weight: 500;
+    text-wrap: balance;
+  }
+}
