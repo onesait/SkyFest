@@ -79,6 +79,7 @@ button:hover,
 
 input {
   border: 1px solid var(--grey);
+  width: 100%;
   padding: 13px 23px;
   font-size: 16px;
   line-height: 150%;
@@ -146,6 +147,65 @@ p {
   padding: 16px 0;
   background-color: var(--white);
 }
+.site-header__logo-img {
+  max-width: 100%;
+}
+.site-header__nav {
+  display: flex;
+  justify-content: center;
+}
+.site-header__nav-list {
+  display: flex;
+  gap: 48px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.site-header__nav-item--has-children {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.site-header__nav-item--has-children::after {
+  content: "";
+  transition: 0.4s ease;
+  width: 20px;
+  height: 20px;
+  background: url("../img/global/chevron-down-20-black.svg");
+}
+.site-header__nav-item--has-children:hover::after {
+  transform: rotate(180deg);
+}
+.site-header__nav-item--has-children:hover .site-header__nav-sublist {
+  opacity: 1;
+  visibility: visible;
+  max-height: 400px;
+}
+.site-header__nav-link {
+  font-weight: 700;
+  white-space: nowrap;
+}
+.site-header__nav-sublist {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s ease;
+  margin: 0;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+  max-height: 0;
+  padding: 24px;
+  background-color: var(--white);
+  list-style: none;
+}
+.site-header__nav-sublist .site-header__nav-link {
+  font-weight: 400;
+}
 .site-header__phone {
   font-size: 20px;
   line-height: 130%;
@@ -161,7 +221,34 @@ p {
   height: 24px;
   background: url("../img/global/phone-24-red.svg");
 }
+.site-header__menu-btn {
+  margin-left: auto;
+  border: 0;
+  min-width: 0;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+}
+.site-header__menu-btn path {
+  transition: 0.4s ease;
+}
+.site-header__menu-btn:hover {
+  background-color: transparent;
+}
+.site-header__menu-btn:hover path {
+  fill: var(--red);
+}
 
+@media all and (max-width: 1199px) {
+  .site-header__nav-list {
+    gap: 24px;
+  }
+}
+@media all and (max-width: 575px) {
+  .site-header__phone {
+    font-size: 0;
+  }
+}
 .site-main {
   position: relative;
   flex: 1;
@@ -170,6 +257,63 @@ p {
 .site-footer__top {
   border-top: 1px solid var(--light-gray);
   padding: 48px 0;
+}
+.site-footer__title {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.site-footer__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.site-footer__menu-link--main {
+  font-weight: 600;
+}
+.site-footer__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 16px 0 24px;
+}
+.site-footer__phone {
+  font-size: 16px;
+  line-height: 150%;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.site-footer__phone::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url("../img/global/phone-24-red.svg");
+}
+.site-footer__email {
+  font-size: 16px;
+  line-height: 150%;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.site-footer__email::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url("../img/global/email-24-red.svg");
+}
+.site-footer__messengers {
+  display: flex;
+  gap: 24px;
+}
+.site-footer__messenger path {
+  transition: 0.6s ease;
+}
+.site-footer__messenger:hover path:first-child {
+  fill: var(--black);
 }
 .site-footer__bottom {
   padding: 24px 0;
@@ -237,10 +381,6 @@ p {
 }
 
 .announcement {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   padding: 16px 20px;
   backdrop-filter: blur(20px);
   background: rgba(245, 245, 245, 0.8);
@@ -249,6 +389,37 @@ p {
   font-weight: 500;
   text-align: center;
   text-wrap: balance;
+}
+
+.main-screen {
+  position: relative;
+  background: linear-gradient(90deg, #e0e0e0 0%, #fff 100%);
+}
+.main-screen::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 56vw;
+  background: url("../img/home-page/main-screen-bg-skyfest.png") left/cover no-repeat;
+}
+.main-screen__item-text {
+  font-size: 22px;
+  line-height: 145%;
+  margin-bottom: 32px;
+}
+.main-screen__item-img {
+  margin: auto 0 0 auto;
+}
+.main-screen__controls {
+  position: absolute;
+  bottom: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
 .advantages {
@@ -266,6 +437,112 @@ p {
   padding-right: 0.9vw;
   font-weight: 500;
   text-wrap: balance;
+}
+
+.services-block__title {
+  margin-bottom: 32px;
+}
+.services-block__item {
+  position: relative;
+  z-index: 1;
+}
+.services-block__item:nth-child(1) {
+  z-index: 4;
+}
+.services-block__item:nth-child(2) {
+  z-index: 3;
+}
+.services-block__item:nth-child(3) {
+  z-index: 2;
+}
+.services-block__item-wrapper {
+  position: relative;
+  display: flex;
+  height: 232px;
+}
+.services-block__item-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  gap: 16px;
+  transition: max-height 1s ease;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-height: 232px;
+  background-color: var(--white);
+}
+.services-block__item-inner:hover {
+  max-height: 2000px;
+}
+.services-block__item-inner:hover .services-block__item-list {
+  overflow: visible;
+  max-height: 10000px;
+}
+.services-block__item-content {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+.services-block__item-title {
+  font-size: 20px;
+  line-height: 130%;
+  margin-bottom: 16px;
+  font-weight: 600;
+  color: var(--black);
+}
+.services-block__item-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  overflow: hidden;
+  transition: max-height 0.9s ease;
+  max-height: 88px;
+  padding: 0;
+  list-style: none;
+}
+.services-block__item-subitem {
+  font-size: 16px;
+  line-height: 150%;
+  position: relative;
+  padding-left: 12px;
+  color: var(--grey);
+}
+.services-block__item-subitem::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  background-color: var(--grey);
+}
+.services-block__item-subitem:nth-child(1), .services-block__item-subitem:nth-child(3), .services-block__item-subitem:nth-child(6), .services-block__item-subitem:nth-child(9), .services-block__item-subitem:nth-child(11), .services-block__item-subitem:nth-child(14), .services-block__item-subitem:nth-child(17), .services-block__item-subitem:nth-child(19), .services-block__item-subitem:nth-child(22), .services-block__item-subitem:nth-child(25), .services-block__item-subitem:nth-child(27) {
+  padding-left: 0;
+}
+.services-block__item-subitem:nth-child(1)::before, .services-block__item-subitem:nth-child(3)::before, .services-block__item-subitem:nth-child(6)::before, .services-block__item-subitem:nth-child(9)::before, .services-block__item-subitem:nth-child(11)::before, .services-block__item-subitem:nth-child(14)::before, .services-block__item-subitem:nth-child(17)::before, .services-block__item-subitem:nth-child(19)::before, .services-block__item-subitem:nth-child(22)::before, .services-block__item-subitem:nth-child(25)::before, .services-block__item-subitem:nth-child(27)::before {
+  content: none;
+}
+.services-block__item-link {
+  font-size: 16px;
+  line-height: 150%;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: auto;
+  font-weight: 500;
+  color: var(--grey);
+}
+.services-block__item-link::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: url("../img/global/chevron-right-30-grey.svg");
+}
+.services-block__item-img {
+  margin: auto 0 0 auto;
 }
 
 .about__top-text {
@@ -458,6 +735,111 @@ p {
   color: var(--grey);
 }
 
+.news-block__title {
+  margin-bottom: 36px;
+}
+.news-block__item-wrapper {
+  position: relative;
+  display: flex;
+  height: 362px;
+}
+.news-block__item-wrapper:hover .news-block__item-content {
+  min-height: 144px;
+}
+.news-block__item-date {
+  font-size: 12px;
+  line-height: 150%;
+  position: absolute;
+  z-index: 2;
+  top: 13px;
+  left: 24px;
+  color: var(--white);
+}
+.news-block__item-content {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: 0.6s ease;
+  min-height: 362px;
+  padding: 24px;
+  background-color: rgba(33, 33, 33, 0.6);
+}
+.news-block__item-inner {
+  display: flex;
+  flex-direction: column;
+  min-height: 96px;
+}
+.news-block__item-title {
+  margin-bottom: 16px;
+  font-weight: 600;
+  color: var(--white);
+}
+.news-block__item-link {
+  font-size: 16px;
+  line-height: 150%;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: auto 0 0 auto;
+  font-weight: 500;
+  color: var(--white);
+}
+.news-block__item-link::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url("../img/global/chevron-right-24-white.svg");
+}
+.news-block__link {
+  margin: 8px auto 0;
+}
+
 .seo-block p:last-child {
   margin-bottom: 0;
+}
+
+.main-form {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--light-gray);
+}
+.main-form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 38vw;
+  background: url("../img/home-page/main-screen-bg-skyfest.png") left/cover no-repeat;
+}
+.main-form__content {
+  position: relative;
+  z-index: 2;
+}
+.main-form__text {
+  margin-bottom: 16px;
+}
+.main-form__btn {
+  width: 100%;
+  padding: 11px 22px;
+}
+.main-form__policy {
+  font-size: 14px;
+  line-height: 129%;
+  color: var(--grey);
+}
+.main-form__policy a {
+  color: var(--red);
+}
+.main-form__policy a:hover {
+  color: var(--black);
+}
+.main-form__img {
+  position: absolute;
+  right: -120px;
+  bottom: 0;
 }

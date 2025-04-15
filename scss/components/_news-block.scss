@@ -1,0 +1,73 @@
+.news-block {
+  &__title {
+    margin-bottom: 36px;
+  }
+
+  &__item-wrapper {
+    position: relative;
+    display: flex;
+    height: 362px;
+
+    &:hover {
+      .news-block__item-content {
+        min-height: 144px;
+      }
+    }
+  }
+
+  &__item-date {
+    @include fs-12;
+    position: absolute;
+    z-index: 2;
+    top: 13px;
+    left: 24px;
+    color: var(--white);
+  }
+
+  &__item-content {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: .6s ease;
+    min-height: 362px;
+    padding: 24px;
+    background-color: rgba(33, 33, 33, 0.6);
+  }
+
+  &__item-inner {
+    display: flex;
+    flex-direction: column;
+    min-height: 96px;
+  }
+
+  &__item-title {
+    margin-bottom: 16px;
+    font-weight: 600;
+    color: var(--white);
+  }
+
+  &__item-link {
+    @include fs-16;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: auto 0 0 auto;
+    font-weight: 500;
+    color: var(--white);
+
+    &::after {
+      content: "";
+      width: 24px;
+      height: 24px;
+      background: url("../img/global/chevron-right-24-white.svg");
+    }
+  }
+
+  &__link {
+    margin: 8px auto 0;
+  }
+}

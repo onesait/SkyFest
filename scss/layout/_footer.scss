@@ -4,6 +4,78 @@
     padding: 48px 0;
   }
 
+  &__title {
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__menu-link--main {
+    font-weight: 600;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 16px 0 24px;
+  }
+
+  &__phone {
+    @include fs-16;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    &::before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      background: url("../img/global/phone-24-red.svg");
+    }
+  }
+
+  &__email {
+    @include fs-16;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    &::before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      background: url("../img/global/email-24-red.svg");
+    }
+  }
+
+  &__messengers {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__messenger {
+    path {
+      transition: .6s ease;
+    }
+
+    &:hover {
+      path {
+        &:first-child {
+          fill: var(--black);
+        }
+      }
+    }
+  }
+
   &__bottom {
     padding: 24px 0;
     background-color: var(--light-gray);
