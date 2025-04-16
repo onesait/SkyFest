@@ -92,17 +92,7 @@
       background-color: var(--grey);
     }
 
-    &:nth-child(1),
-    &:nth-child(3),
-    &:nth-child(6),
-    &:nth-child(9),
-    &:nth-child(11),
-    &:nth-child(14),
-    &:nth-child(17),
-    &:nth-child(19),
-    &:nth-child(22),
-    &:nth-child(25),
-    &:nth-child(27) {
+    &.new-line {
       padding-left: 0;
 
       &::before {
@@ -124,7 +114,7 @@
       content: "";
       width: 30px;
       height: 30px;
-      background: url("../img/global/chevron-right-30-grey.svg");
+      background: url("../img/global/chevron-right-30-grey.svg") center/contain no-repeat;
     }
   }
 
@@ -148,26 +138,6 @@
       gap: 8px;
     }
 
-    &__item-subitem {
-      &:nth-child(1),
-      &:nth-child(3),
-      &:nth-child(6),
-      &:nth-child(9),
-      &:nth-child(11),
-      &:nth-child(14),
-      &:nth-child(17),
-      &:nth-child(19),
-      &:nth-child(22),
-      &:nth-child(25),
-      &:nth-child(27) {
-        padding-left: 12px;
-
-        &::before {
-          content: "";
-        }
-      }
-    }
-
     &__item-img {
       max-width: 140px;
     }
@@ -176,8 +146,19 @@
 
 @media (max-width: 991px) {
   .services-block {
+    &__item-wrapper {
+      height: auto;
+    }
+
     &__item-inner {
+      position: relative;
       gap: 16px;
+      max-height: 100%;
+    }
+
+    &__item-list {
+      overflow: visible;
+      max-height: 100%;
     }
 
     &__item-img {
@@ -188,6 +169,20 @@
 
 @media (max-width: 767px) {
   .services-block {
+    &__item-inner {
+      gap: 0;
+    }
+
+    &__item-list {
+      margin-left: -12px;
+    }
+
+    &__item-subitem {
+      &.new-line {
+        padding-left: 12px;
+      }
+    }
+
     &__item-img {
       max-width: 160px;
     }
@@ -200,17 +195,8 @@
       margin-bottom: 24px;
     }
 
-    &__item-wrapper {
-      height: 190px;
-    }
-
-    &__item-inner {
-      gap: 0;
-      max-height: 190px;
-    }
-
     &__item-content {
-      padding: 16px;
+      padding: 16px 8px 16px 16px;
     }
 
     &__item-title {
@@ -220,7 +206,7 @@
 
     &__item-list {
       gap: 4px;
-      margin-bottom: 8px;
+      margin: 0 0 8px -8px;
     }
 
     &__item-subitem {
@@ -232,18 +218,18 @@
         height: 3px;
       }
 
-      &:nth-child(1),
-      &:nth-child(3),
-      &:nth-child(6),
-      &:nth-child(9),
-      &:nth-child(11),
-      &:nth-child(14),
-      &:nth-child(17),
-      &:nth-child(19),
-      &:nth-child(22),
-      &:nth-child(25),
-      &:nth-child(27) {
+
+      &.new-line {
         padding-left: 8px;
+      }
+    }
+
+    &__item-link {
+      @include fs-14;
+
+      &::after {
+        width: 24px;
+        height: 24px;
       }
     }
 
