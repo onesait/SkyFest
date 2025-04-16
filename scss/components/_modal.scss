@@ -1,0 +1,53 @@
+.modal.fade {
+  background-color: rgba(33, 33, 33, 0.6);
+}
+
+.modal-dialog {
+  &--mobile-menu {
+    margin: 0 auto 0 0;
+    width: 388px;
+    height: 100vh;
+  }
+
+  & > * {
+    position: relative;
+    pointer-events: auto;
+  }
+}
+
+.modal-wrapper {
+  overflow-y: auto;
+  padding: 48px 24px;
+  background-color: var(--white);
+
+  &--mobile-menu {
+    height: 100%;
+    padding-top: 120px;
+  }
+}
+
+.modal-close-btn {
+  &--menu {
+
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 575px) {
+  .modal-dialog {
+    &--mobile-menu {
+      width: 100%;
+    }
+  }
+
+  .modal-wrapper {
+    padding: 48px 16px 24px;
+
+    &--mobile-menu {
+      padding-top: 108px;
+    }
+  }
+}

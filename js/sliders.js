@@ -2,7 +2,6 @@ if (jQuery(".main-screen__slider").length) {
   jQuery(".main-screen__slider")
     .not(".slick-initialized")
     .slick({
-      // slidesToShow: 1,
       dots: true,
       appendArrows: jQuery(".main-screen__controls"),
       appendDots: jQuery(".main-screen__controls"),
@@ -39,5 +38,37 @@ if (jQuery(".clients__slider").length) {
         '    <path d="M9 18L15 12L9 6" stroke="#B20003" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />\n' +
         '  </svg>\n' +
         '</button>',
+      responsive: [
+        {
+          breakpoint: 1400,
+          settings: {
+            slidesToShow: 5,
+          }
+        },
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 4,
+          }
+        },
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1,
+          }
+        },
+      ]
     });
 }

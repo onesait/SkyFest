@@ -25,3 +25,11 @@
     margin: 32px 0 0 auto;
   }
 }
+
+@media (max-width: 767px) {
+  .clients {
+    &__title {
+      margin-bottom: 24px;
+    }
+  }
+}

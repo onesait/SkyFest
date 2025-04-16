@@ -35,3 +35,47 @@
     color: var(--grey);
   }
 }
+
+@media (max-width: 1399px) {
+  .about {
+    &__item-number {
+      @include fs-28;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .about {
+    &__item-wrapper {
+      padding: 24px 16px;
+    }
+
+    &__item-number {
+      @include fs-26;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .about {
+    &__item-number {
+      @include fs-18;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .about {
+    &__item-wrapper {
+      padding: 16px;
+    }
+
+    &__item-top-text {
+      margin-bottom: 8px;
+    }
+
+    &__item-bottom-text {
+      @include fs-14;
+    }
+  }
+}

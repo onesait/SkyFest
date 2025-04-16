@@ -13,6 +13,11 @@
   line-height: 150%;
 }
 
+@mixin fs-18 {
+  font-size: 18px;
+  line-height: 144%;
+}
+
 @mixin fs-20 {
   font-size: 20px;
   line-height: 130%;
@@ -23,7 +28,37 @@
   line-height: 145%;
 }
 
+@mixin fs-26 {
+  font-size: 26px;
+  line-height: 123%;
+}
+
+@mixin fs-28 {
+  font-size: 28px;
+  line-height: 150%;
+}
+
+@mixin fs-36 {
+  font-size: 36px;
+  line-height: 117%;
+}
+
+@mixin fs-38 {
+  font-size: 38px;
+  line-height: 121%;
+}
+
 @mixin fs-40 {
   font-size: 40px;
   line-height: 125%;
+}
+
+@mixin fs-48 {
+  font-size: 48px;
+  line-height: 116%;
+}
+
+@mixin fs-58 {
+  font-size: 58px;
+  line-height: 117%;
 }

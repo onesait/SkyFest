@@ -22,3 +22,12 @@
     color: var(--grey);
   }
 }
+
+@media (max-width: 575px) {
+  .reviews {
+    &__item-wrapper {
+      height: 120px;
+      padding: 24px;
+    }
+  }
+}

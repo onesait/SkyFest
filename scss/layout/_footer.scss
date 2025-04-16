@@ -4,6 +4,10 @@
     padding: 48px 0;
   }
 
+  &__logo-img {
+    max-width: 100%;
+  }
+
   &__title {
     margin-bottom: 8px;
     font-weight: 600;
@@ -88,5 +92,21 @@
   &__policy {
     @include fs-16;
     margin-left: auto;
+  }
+}
+
+@media (max-width: 575px) {
+  .site-footer {
+    &__contacts {
+      gap: 16px;
+    }
+
+    &__copyright {
+      margin: 0 auto 16px;
+    }
+
+    &__policy {
+      margin: 0 auto;
+    }
   }
 }

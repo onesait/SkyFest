@@ -3,10 +3,9 @@
 }
 
 body {
+  @include fs-18;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 144%;
   color: var(--black);
 }
 
@@ -39,16 +38,14 @@ h3,
 
 h1,
 .main-title {
+  @include fs-58;
   font-weight: 500;
-  font-size: 58px;
-  line-height: 117%;
 }
 
 h2,
 .section-title {
+  @include fs-48;
   font-weight: 500;
-  font-size: 48px;
-  line-height: 116%;
 }
 
 button,
@@ -73,11 +70,10 @@ button,
 }
 
 input {
+  @include fs-16;
   border: 1px solid var(--grey);
   width: 100%;
   padding: 13px 23px;
-  font-size: 16px;
-  line-height: 150%;
   color: var(--black);
 
   &:focus {
@@ -101,4 +97,74 @@ input {
 
 p {
   margin-bottom: 8px;
+}
+
+@media (max-width: 1399px) {
+  h1,
+  .main-title {
+    @include fs-48;
+  }
+
+  h2,
+  .section-title {
+    @include fs-36;
+  }
+}
+
+@media (max-width: 1199px) {
+  h1,
+  .main-title {
+    @include fs-38;
+  }
+
+  h2,
+  .section-title {
+    @include fs-28;
+  }
+}
+
+@media (max-width: 991px) {
+  h1,
+  .main-title {
+    @include fs-28;
+  }
+
+  h2,
+  .section-title {
+    @include fs-20;
+  }
+}
+
+@media (max-width: 767px) {
+  h1,
+  h2,
+  h3,
+  .main-title,
+  .section-title {
+    margin: 0 0 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  body {
+    @include fs-14;
+  }
+
+  h1,
+  h2,
+  h3,
+  .main-title,
+  .section-title {
+    margin: 0 0 8px;
+  }
+
+  h1,
+  .main-title {
+    @include fs-26;
+  }
+
+  button,
+  .button {
+    min-width: 100%;
+  }
 }
