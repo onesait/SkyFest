@@ -32,18 +32,20 @@
     left: 0;
     display: flex;
     gap: 16px;
-    transition: max-height 1s ease;
+    transition: max-height .4s ease;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
     width: 100%;
     max-height: 232px;
     background-color: var(--white);
 
     &:hover {
+      transition: max-height 1s ease;
       max-height: 2000px;
 
       .services-block__item-list {
         overflow: visible;
-        max-height: 10000px;
+        transition: max-height 1s ease;
+        max-height: 5000px;
       }
     }
   }
@@ -66,7 +68,7 @@
     flex-wrap: wrap;
     gap: 8px;
     overflow: hidden;
-    transition: max-height .9s ease;
+    transition: max-height .4s ease;
     max-height: 88px;
     padding: 0;
     list-style: none;
