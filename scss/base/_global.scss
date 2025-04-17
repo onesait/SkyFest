@@ -63,6 +63,10 @@ button,
   line-height: 175%;
   color: var(--red);
 
+  &:visited {
+    color: var(--red);
+  }
+
   &:hover {
     background-color: var(--red);
     color: var(--white);
@@ -74,6 +78,7 @@ input {
   border: 1px solid var(--grey);
   width: 100%;
   padding: 13px 23px;
+  background-color: transparent;
   color: var(--black);
 
   &:focus {

@@ -8,31 +8,61 @@
     list-style: none;
   }
 
+  &__sublist-wrapper {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: 0.4s ease;
+    width: 100vw;
+    height: 100%;
+    padding: 96px 24px 48px 24px;
+    background-color: #ffffff;
+
+    &.active {
+      transform: translateX(0%);
+    }
+  }
+
+  &__sublist-header {
+    position: relative;
+    margin-bottom: 24px;
+    padding: 16px 0;
+
+    svg {
+      position: relative;
+      z-index: 2;
+      cursor: pointer;
+    }
+  }
+
+  &__sublist-title {
+    @include fs-18;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+  }
+
   &__sublist {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    transition: max-height .4s ease, padding .4s ease, opacity .9s ease;
+    gap: 16px;
     margin: 0;
-    padding: 16px 0 8px 8px;
+    padding: 0;
     list-style: none;
-
-    .mobile-menu__link {
-      @include fs-16;
-    }
   }
 
   &__item {
     &--has-children {
-      svg {
-        transform: rotate(180deg);
-        transition: .4s ease;
-        padding-left: 4px;
-        cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-        &.active {
-          transform: rotate(0);
-        }
+      & > svg {
+        cursor: pointer;
       }
 
       &:has(svg.active) {

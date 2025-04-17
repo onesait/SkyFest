@@ -132,6 +132,10 @@
       }
     }
   }
+
+  &:not(&--home-page) {
+    border-bottom: 1px solid var(--light-gray);
+  }
 }
 
 @media (max-width: 1199px) {

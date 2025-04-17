@@ -1,0 +1,34 @@
+.breadcrumbs {
+  &__wrapper {
+    @include fs-16;
+    margin: 0;
+    padding: 48px 0;
+    color: #8c8c8c;
+    list-style: none;
+  }
+
+  &__item {
+    display: inline;
+
+    & + &::before {
+      content: "/";
+      color: var(--red);
+    }
+  }
+
+  &__link {
+    color: var(--red);
+
+    &:visited {
+      color: var(--red);
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .breadcrumbs {
+    &__wrapper {
+      padding: 24px 0;
+    }
+  }
+}

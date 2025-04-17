@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="color-scheme" content="light only">
+    <title>SkyFest</title>
+    <link rel="icon" type="image/x-icon" href="img/global/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="page">
+    <header class="site-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-3 col-lg-2 col-md-3 col-sm-4 col-5">
+                    <a href="/" class="site-header__logo-link" rel="home">
+                        <img src="img/global/logo-header.png" alt="логотип" class="site-header__logo-img">
+                    </a>
+                </div>
+                <div class="col-xl-6 col-lg-7 d-lg-block d-none">
+                    <nav class="site-header__nav">
+                        <ul class="site-header__nav-list">
+                            <li class="site-header__nav-item site-header__nav-item--has-children">
+                                <a href="#" class="site-header__nav-link">Услуги</a>
+                                <ul class="site-header__nav-sublist">
+                                    <li class="site-header__nav-item">
+                                        <a href="#" class="site-header__nav-link">Полиграфия</a>
+                                    </li>
+                                    <li class="site-header__nav-item">
+                                        <a href="#" class="site-header__nav-link">Упаковка</a>
+                                    </li>
+                                    <li class="site-header__nav-item">
+                                        <a href="#" class="site-header__nav-link">Корпоративная продукция</a>
+                                    </li>
+                                    <li class="site-header__nav-item">
+                                        <a href="#" class="site-header__nav-link">Подарочные наборы</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="site-header__nav-item">
+                                <a href="#" class="site-header__nav-link">Портфолио</a>
+                            </li>
+                            <li class="site-header__nav-item">
+                                <a href="#" class="site-header__nav-link">О нас</a>
+                            </li>
+                            <li class="site-header__nav-item">
+                                <a href="#" class="site-header__nav-link">Новости</a>
+                            </li>
+                            <li class="site-header__nav-item">
+                                <a href="#" class="site-header__nav-link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-2 offset-lg-0 offset-md-3 offset-sm-0 offset-3 d-flex">
+                    <a href="#" class="site-header__phone">8 (000) 000-00-00</a>
+                </div>
+                <div class="col-2 d-lg-none d-flex">
+                    <button type="button" class="site-header__mobile-menu-btn" data-bs-toggle="modal" data-bs-target="#mobileMenuModal" aria-label="Открыть меню">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M21 17C21.5523 17 22 17.4477 22 18C22 18.5523 21.5523 19 21 19H3C2.44772 19 2 18.5523 2 18C2 17.4477 2.44772 17 3 17H21ZM21 11C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12C2 11.4477 2.44772 11 3 11H21ZM21 5C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6C2 5.44772 2.44772 5 3 5H21Z" fill="#212121"/>
+                        </svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.4143 12.0002L18.7073 6.70725C19.0983 6.31625 19.0983 5.68425 18.7073 5.29325C18.3163 4.90225 17.6842 4.90225 17.2932 5.29325L12.0002 10.5863L6.70725 5.29325C6.31625 4.90225 5.68425 4.90225 5.29325 5.29325C4.90225 5.68425 4.90225 6.31625 5.29325 6.70725L10.5863 12.0002L5.29325 17.2932C4.90225 17.6842 4.90225 18.3163 5.29325 18.7073C5.48825 18.9023 5.74425 19.0002 6.00025 19.0002C6.25625 19.0002 6.51225 18.9023 6.70725 18.7073L12.0002 13.4143L17.2932 18.7073C17.4882 18.9023 17.7443 19.0002 18.0002 19.0002C18.2562 19.0002 18.5123 18.9023 18.7073 18.7073C19.0983 18.3163 19.0983 17.6842 18.7073 17.2932L13.4143 12.0002Z" fill="#B20003" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="site-main">
+        <nav class="breadcrumbs">
+            <div class="container">
+                <ol class="breadcrumbs__wrapper">
+                    <li class="breadcrumbs__item">
+                        <a href="/" class="breadcrumbs__link">Главная</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <span class="breadcrumbs__current">Услуги</span>
+                    </li>
+                </ol>
+            </div>
+        </nav>
+        <section class="services-page pb-96">
+            <div class="container">
+                <h1 class="services-page__title">Услуги</h1>
+                <div class="services-page__list row">
+                    <div class="services-page__item col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                        <a href="#" class="services-page__item-wrapper">
+                            <div class="services-page__item-title">Полиграфия</div>
+                            <div class="services-page__item-link">Подробнее</div>
+                            <img src="img/home-page/services-item-1.png" alt="" class="services-page__item-img">
+                        </a>
+                    </div>
+                    <div class="services-page__item col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                        <a href="#" class="services-page__item-wrapper">
+                            <div class="services-page__item-title">Упаковка</div>
+                            <div class="services-page__item-link">Подробнее</div>
+                            <img src="img/home-page/services-item-2.png" alt="" class="services-page__item-img">
+                        </a>
+                    </div>
+                    <div class="services-page__item col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                        <a href="#" class="services-page__item-wrapper">
+                            <div class="services-page__item-title">Корпоративная продукция</div>
+                            <div class="services-page__item-link">Подробнее</div>
+                            <img src="img/home-page/services-item-3.png" alt="" class="services-page__item-img">
+                        </a>
+                    </div>
+                    <div class="services-page__item col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                        <a href="#" class="services-page__item-wrapper">
+                            <div class="services-page__item-title">Подарочные наборы</div>
+                            <div class="services-page__item-link">Подробнее</div>
+                            <img src="img/home-page/services-item-4.png" alt="" class="services-page__item-img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="seo-block pb-96">
+            <div class="container">
+                <h2>Место для дополнительного текста</h2>
+                <div class="seo-block__text">
+                    <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. </p>
+                    <p>Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="site-footer__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mb-lg-0 mb-5">
+                        <a href="/" class="site-footer__logo-link" rel="home">
+                            <img src="img/global/logo-footer.png" alt="логотип" class="site-footer__logo-img">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-6 mb-lg-0 mb-5">
+                        <div class="site-footer__title">Услуги</div>
+                        <ul class="site-footer__menu">
+                            <li class="site-footer__menu-item">
+                                <a href="#" class="site-footer__menu-link">Полиграфия</a>
+                            </li>
+                            <li class="site-footer__menu-item">
+                                <a href="#" class="site-footer__menu-link">Упаковка</a>
+                            </li>
+                            <li class="site-footer__menu-item">
+                                <a href="#" class="site-footer__menu-link">Корпоративная продукция</a>
+                            </li>
+                            <li class="site-footer__menu-item">
+                                <a href="#" class="site-footer__menu-link">Подарочные наборы</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-3 col-lg-2 col-6">
+                        <ul class="site-footer__menu">
+                            <li class="site-footer__menu-item">
+                                <a href="#" class="site-footer__menu-link site-footer__menu-link--main">Портфолио</a>
+                            </li>
+                            <li class="site-footer__menu-item">
+                                <a href="#" class="site-footer__menu-link site-footer__menu-link--main">Цены</a>
+                            </li>
+                            <li class="site-footer__menu-item">
+                                <a href="#" class="site-footer__menu-link site-footer__menu-link--main">О нас</a>
+                            </li>
+                            <li class="site-footer__menu-item">
+                                <a href="#" class="site-footer__menu-link site-footer__menu-link--main">Новости</a>
+                            </li>
+                            <li class="site-footer__menu-item">
+                                <a href="#" class="site-footer__menu-link site-footer__menu-link--main">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-sm-6">
+                        <div class="site-footer__title">Контакты</div>
+                        <div class="site-footer__contacts">
+                            <a href="#" class="site-footer__phone">8 (000) 000-00-00</a>
+                            <a href="#" class="site-footer__email">www@gmail.com</a>
+                        </div>
+                        <div class="site-footer__messengers">
+                            <a href="#" class="site-footer__messenger" target="_blank" aria-label="WhatsApp">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_170_1785)">
+                                        <path d="M10.0025 0H9.9975C4.48375 0 0 4.485 0 10C0 12.1875 0.705 14.215 1.90375 15.8612L0.6575 19.5763L4.50125 18.3475C6.0825 19.395 7.96875 20 10.0025 20C15.5162 20 20 15.5138 20 10C20 4.48625 15.5162 0 10.0025 0Z" fill="#B20003" />
+                                        <path d="M15.8217 14.1217C15.5804 14.803 14.6229 15.368 13.8592 15.533C13.3367 15.6442 12.6542 15.733 10.3567 14.7805C7.41793 13.563 5.52543 10.5767 5.37793 10.383C5.23668 10.1892 4.19043 8.80172 4.19043 7.36672C4.19043 5.93172 4.91918 5.23297 5.21293 4.93297C5.45418 4.68672 5.85293 4.57422 6.23543 4.57422C6.35918 4.57422 6.47043 4.58047 6.57043 4.58547C6.86418 4.59797 7.01168 4.61547 7.20543 5.07922C7.44668 5.66047 8.03418 7.09547 8.10418 7.24297C8.17543 7.39047 8.24668 7.59047 8.14668 7.78422C8.05293 7.98422 7.97043 8.07297 7.82293 8.24297C7.67543 8.41297 7.53543 8.54297 7.38793 8.72547C7.25293 8.88422 7.10043 9.05422 7.27043 9.34797C7.44043 9.63547 8.02793 10.5942 8.89293 11.3642C10.0092 12.358 10.9142 12.6755 11.2379 12.8105C11.4792 12.9105 11.7667 12.8867 11.9429 12.6992C12.1667 12.458 12.4429 12.058 12.7242 11.6642C12.9242 11.3817 13.1767 11.3467 13.4417 11.4467C13.7117 11.5405 15.1404 12.2467 15.4342 12.393C15.7279 12.5405 15.9217 12.6105 15.9929 12.7342C16.0629 12.858 16.0629 13.4392 15.8217 14.1217Z" fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_170_1785">
+                                            <rect width="20" height="20" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <a href="#" class="site-footer__messenger" target="_blank" aria-label="Telegram">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.84765 12.6505L7.51681 17.3039C7.99015 17.3039 8.19515 17.1005 8.44098 16.8564L10.6601 14.7355L15.2585 18.103C16.1018 18.573 16.696 18.3255 16.9235 17.3272L19.9418 3.18385L19.9426 3.18302C20.2101 1.93635 19.4918 1.44885 18.6701 1.75469L0.928481 8.54719C-0.282352 9.01719 -0.264018 9.69219 0.722648 9.99802L5.25848 11.4089L15.7943 4.81635C16.2901 4.48802 16.741 4.66969 16.3701 4.99802L7.84765 12.6505Z" fill="#B20003" />
+                                </svg>
+                            </a>
+                            <a href="#" class="site-footer__messenger" target="_blank" aria-label="Вконтакте">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z" fill="#B20003" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.85648 14.1346H10.6535C10.6535 14.1346 10.8942 14.1086 11.0171 13.9779C11.1302 13.858 11.1266 13.6327 11.1266 13.6327C11.1266 13.6327 11.1111 12.5783 11.6074 12.423C12.0967 12.2701 12.7249 13.4421 13.3909 13.8928C13.8944 14.2338 14.2771 14.1591 14.2771 14.1591L16.0577 14.1346C16.0577 14.1346 16.9892 14.078 16.5475 13.3559C16.5113 13.2968 16.2903 12.8217 15.2236 11.8455C14.1071 10.8237 14.2566 10.989 15.6015 9.22153C16.4206 8.14514 16.748 7.48799 16.6458 7.20654C16.5482 6.93847 15.9458 7.00932 15.9458 7.00932L13.941 7.02164C13.941 7.02164 13.7923 7.00165 13.6821 7.06661C13.5744 7.13033 13.5051 7.27882 13.5051 7.27882C13.5051 7.27882 13.1878 8.11177 12.7646 8.82014C11.8718 10.3149 11.5149 10.3938 11.369 10.301C11.0296 10.0846 11.1143 9.43195 11.1143 8.96827C11.1143 7.51976 11.3371 6.9158 10.6804 6.75946C10.4625 6.70752 10.3021 6.67325 9.7448 6.66772C9.02945 6.6604 8.42398 6.66986 8.08115 6.83549C7.85307 6.94561 7.67713 7.19101 7.78429 7.20511C7.91679 7.2226 8.2169 7.28489 8.37601 7.49853C8.58145 7.77409 8.57421 8.39305 8.57421 8.39305C8.57421 8.39305 8.69223 10.0982 8.29854 10.3101C8.02829 10.4553 7.65758 10.1587 6.86169 8.80265C6.45387 8.10802 6.14598 7.34022 6.14598 7.34022C6.14598 7.34022 6.0866 7.19672 5.98071 7.11998C5.8522 7.02699 5.67264 6.99737 5.67264 6.99737L3.76751 7.00968C3.76751 7.00968 3.48152 7.01753 3.37653 7.14015C3.28313 7.24919 3.36911 7.47479 3.36911 7.47479C3.36911 7.47479 4.86063 10.9154 6.54944 12.6493C8.09798 14.239 9.85648 14.1346 9.85648 14.1346Z" fill="white" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="site-footer__bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 d-flex">
+                        <div class="site-footer__copyright">© 2025 SkyFest</div>
+                    </div>
+                    <div class="col-sm-6 d-flex">
+                        <a href="#" class="site-footer__policy">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<div class="mobile-menu modal fade" id="mobileMenuModal" tabindex="-1" aria-labelledby="Меню" aria-hidden="true">
+    <div class="modal-dialog modal-dialog--mobile-menu">
+        <div class="modal-wrapper modal-wrapper--mobile-menu">
+            <div class="container">
+                <ul class="mobile-menu__list">
+                    <li class="mobile-menu__item mobile-menu__item--has-children">
+                        <a href="#" class="mobile-menu__link">Услуги</a>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="#B20003" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                        <div class="mobile-menu__sublist-wrapper">
+                            <div class="mobile-menu__sublist-header">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 18L9 12L15 6" stroke="#949494" stroke-width="2"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <div class="mobile-menu__sublist-title">Услуги</div>
+                            </div>
+                            <ul class="mobile-menu__sublist">
+                                <li class="mobile-menu__item">
+                                    <a href="#" class="mobile-menu__link">Полиграфия</a>
+                                </li>
+                                <li class="mobile-menu__item">
+                                    <a href="#" class="mobile-menu__link">Упаковка</a>
+                                </li>
+                                <li class="mobile-menu__item">
+                                    <a href="#" class="mobile-menu__link">Корпоративная продукция</a>
+                                </li>
+                                <li class="mobile-menu__item">
+                                    <a href="#" class="mobile-menu__link">Подарочные наборы</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="#" class="mobile-menu__link">Портфолио</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="#" class="mobile-menu__link">О нас</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="#" class="mobile-menu__link">Новости</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="#" class="mobile-menu__link">Контакты</a>
+                    </li>
+                </ul>
+                <a href="#" class="mobile-menu__email">www@gmail.com</a>
+                <div class="mobile-menu__messengers">
+                    <a href="#" class="mobile-menu__messenger" target="_blank" aria-label="WhatsApp">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_170_1785)">
+                                <path d="M10.0025 0H9.9975C4.48375 0 0 4.485 0 10C0 12.1875 0.705 14.215 1.90375 15.8612L0.6575 19.5763L4.50125 18.3475C6.0825 19.395 7.96875 20 10.0025 20C15.5162 20 20 15.5138 20 10C20 4.48625 15.5162 0 10.0025 0Z"
+                                      fill="#B20003"/>
+                                <path d="M15.8217 14.1217C15.5804 14.803 14.6229 15.368 13.8592 15.533C13.3367 15.6442 12.6542 15.733 10.3567 14.7805C7.41793 13.563 5.52543 10.5767 5.37793 10.383C5.23668 10.1892 4.19043 8.80172 4.19043 7.36672C4.19043 5.93172 4.91918 5.23297 5.21293 4.93297C5.45418 4.68672 5.85293 4.57422 6.23543 4.57422C6.35918 4.57422 6.47043 4.58047 6.57043 4.58547C6.86418 4.59797 7.01168 4.61547 7.20543 5.07922C7.44668 5.66047 8.03418 7.09547 8.10418 7.24297C8.17543 7.39047 8.24668 7.59047 8.14668 7.78422C8.05293 7.98422 7.97043 8.07297 7.82293 8.24297C7.67543 8.41297 7.53543 8.54297 7.38793 8.72547C7.25293 8.88422 7.10043 9.05422 7.27043 9.34797C7.44043 9.63547 8.02793 10.5942 8.89293 11.3642C10.0092 12.358 10.9142 12.6755 11.2379 12.8105C11.4792 12.9105 11.7667 12.8867 11.9429 12.6992C12.1667 12.458 12.4429 12.058 12.7242 11.6642C12.9242 11.3817 13.1767 11.3467 13.4417 11.4467C13.7117 11.5405 15.1404 12.2467 15.4342 12.393C15.7279 12.5405 15.9217 12.6105 15.9929 12.7342C16.0629 12.858 16.0629 13.4392 15.8217 14.1217Z"
+                                      fill="white"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_170_1785">
+                                    <rect width="20" height="20" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                    <a href="#" class="mobile-menu__messenger" target="_blank" aria-label="Telegram">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.84765 12.6505L7.51681 17.3039C7.99015 17.3039 8.19515 17.1005 8.44098 16.8564L10.6601 14.7355L15.2585 18.103C16.1018 18.573 16.696 18.3255 16.9235 17.3272L19.9418 3.18385L19.9426 3.18302C20.2101 1.93635 19.4918 1.44885 18.6701 1.75469L0.928481 8.54719C-0.282352 9.01719 -0.264018 9.69219 0.722648 9.99802L5.25848 11.4089L15.7943 4.81635C16.2901 4.48802 16.741 4.66969 16.3701 4.99802L7.84765 12.6505Z"
+                                  fill="#B20003"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="mobile-menu__messenger" target="_blank" aria-label="Вконтакте">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z"
+                                  fill="#B20003"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M9.85648 14.1346H10.6535C10.6535 14.1346 10.8942 14.1086 11.0171 13.9779C11.1302 13.858 11.1266 13.6327 11.1266 13.6327C11.1266 13.6327 11.1111 12.5783 11.6074 12.423C12.0967 12.2701 12.7249 13.4421 13.3909 13.8928C13.8944 14.2338 14.2771 14.1591 14.2771 14.1591L16.0577 14.1346C16.0577 14.1346 16.9892 14.078 16.5475 13.3559C16.5113 13.2968 16.2903 12.8217 15.2236 11.8455C14.1071 10.8237 14.2566 10.989 15.6015 9.22153C16.4206 8.14514 16.748 7.48799 16.6458 7.20654C16.5482 6.93847 15.9458 7.00932 15.9458 7.00932L13.941 7.02164C13.941 7.02164 13.7923 7.00165 13.6821 7.06661C13.5744 7.13033 13.5051 7.27882 13.5051 7.27882C13.5051 7.27882 13.1878 8.11177 12.7646 8.82014C11.8718 10.3149 11.5149 10.3938 11.369 10.301C11.0296 10.0846 11.1143 9.43195 11.1143 8.96827C11.1143 7.51976 11.3371 6.9158 10.6804 6.75946C10.4625 6.70752 10.3021 6.67325 9.7448 6.66772C9.02945 6.6604 8.42398 6.66986 8.08115 6.83549C7.85307 6.94561 7.67713 7.19101 7.78429 7.20511C7.91679 7.2226 8.2169 7.28489 8.37601 7.49853C8.58145 7.77409 8.57421 8.39305 8.57421 8.39305C8.57421 8.39305 8.69223 10.0982 8.29854 10.3101C8.02829 10.4553 7.65758 10.1587 6.86169 8.80265C6.45387 8.10802 6.14598 7.34022 6.14598 7.34022C6.14598 7.34022 6.0866 7.19672 5.98071 7.11998C5.8522 7.02699 5.67264 6.99737 5.67264 6.99737L3.76751 7.00968C3.76751 7.00968 3.48152 7.01753 3.37653 7.14015C3.28313 7.24919 3.36911 7.47479 3.36911 7.47479C3.36911 7.47479 4.86063 10.9154 6.54944 12.6493C8.09798 14.239 9.85648 14.1346 9.85648 14.1346Z"
+                                  fill="white"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+<script src="js/jquery.min.js" defer></script>
+<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
+<script src="js/sliders.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

@@ -5,11 +5,24 @@ mobileMenuBtn.addEventListener('click', (e) => {
 });
 
 
-const mobileMenuItemHasChildrenSvg = document.querySelector('.mobile-menu__item--has-children svg');
+function handleMobileMenuArrows() {
+	document.addEventListener('click', (e) => {
+		const arrow = e.target.closest('.mobile-menu__item--has-children > svg');
+		if (arrow) {
+			const sublistWrapper = arrow.nextElementSibling;
+			sublistWrapper?.classList.add('active');
+			return;
+		}
 
-mobileMenuItemHasChildrenSvg.addEventListener('click', (e) => {
-	mobileMenuItemHasChildrenSvg.classList.toggle('active');
-});
+		const backArrow = e.target.closest('.mobile-menu__sublist-header > svg');
+		if (backArrow) {
+			const sublistWrapper = backArrow.closest('.mobile-menu__sublist-wrapper');
+			sublistWrapper?.classList.remove('active');
+		}
+	});
+}
+
+handleMobileMenuArrows();
 
 
 function markNewLineItems() {

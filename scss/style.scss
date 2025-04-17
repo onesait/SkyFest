@@ -8,6 +8,9 @@
 @import './layout/footer';
 
 @import './components/slick-slider';
+@import './components/mobile-menu';
+@import './components/modal';
+@import './components/breadcrumbs';
 @import './components/announcement';
 @import './components/main-screen';
 @import './components/advantages';
@@ -19,5 +22,6 @@
 @import './components/news-block';
 @import './components/seo-block';
 @import './components/main-form';
-@import './components/modal';
-@import './components/mobile-menu';
+@import './components/not-found';
+@import './components/services-page';
+@import './components/contacts-page';

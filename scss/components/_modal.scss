@@ -4,8 +4,8 @@
 
 .modal-dialog {
   &--mobile-menu {
-    margin: 0 auto 0 0;
-    width: 388px;
+    margin: 0;
+    min-width: 100vw;
     height: 100vh;
   }
 
@@ -22,7 +22,7 @@
 
   &--mobile-menu {
     height: 100%;
-    padding-top: 120px;
+    padding: 120px 0 48px;
   }
 }
 
