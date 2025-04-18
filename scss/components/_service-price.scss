@@ -1,0 +1,39 @@
+.service-price {
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__table {
+    margin: 0;
+
+    tr {
+      border-color: var(--grey);
+    }
+
+    th {
+      @include fs-16;
+      border-color: var(--grey);
+      padding: 16px;
+      background-color: var(--light-gray);
+      font-weight: 400;
+    }
+
+    td {
+      @include fs-16;
+      border-color: var(--grey);
+      padding: 16px;
+
+      &:last-child {
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .service-price {
+    &__title {
+      margin-bottom: 24px;
+    }
+  }
+}

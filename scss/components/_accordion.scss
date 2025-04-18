@@ -54,6 +54,7 @@
   }
 
   .accordion-body {
+    @include fs-14;
     padding: 0 16px 16px;
   }
 }

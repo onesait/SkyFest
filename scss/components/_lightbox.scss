@@ -1,0 +1,50 @@
+.modal.lightbox {
+  z-index: 9999;
+  backdrop-filter: blur(10px);
+  background: rgba(33, 33, 33, 0.8);
+
+  .btn-close {
+    top: -24px !important;
+    min-width: 0;
+    width: 30px !important;
+    height: 30px !important;
+    padding: 0 !important;
+    background: url('../img/global/close-30-white.svg') center/contain no-repeat !important;
+
+    &:hover {
+      box-shadow: none;
+      background-color: transparent !important;
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  .carousel-control {
+    min-width: auto;
+
+    &:hover,
+    &:focus {
+      box-shadow: none;
+      border-color: transparent;
+      background: transparent;
+    }
+  }
+
+  .carousel-control-next-icon {
+    background: url("../img/global/arrow-right-circle-30.svg") center/contain no-repeat;
+  }
+
+  .carousel-control-prev-icon {
+    background: url("../img/global/arrow-left-circle-30.svg") center/contain no-repeat;
+  }
+
+  .carousel-item .ratio {
+    background: transparent !important;
+  }
+
+  // .spinner-border {
+  //     display: none;
+  // }
+}

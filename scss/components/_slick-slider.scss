@@ -2,8 +2,20 @@
   margin: 0 -12px;
 }
 
+.slick-track {
+  .other-services & {
+    display: flex;
+  }
+}
+
 .slick-slide {
   padding: 0 12px;
+
+  .other-services & {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
 }
 
 .slick-dots {

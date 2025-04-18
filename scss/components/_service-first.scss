@@ -1,0 +1,88 @@
+.service-first {
+  margin-top: -120px;
+  padding: 120px 0 84px;
+  background: linear-gradient(90deg, #e0e0e0 0%, #fff 100%);
+
+  &__characteristic-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 16px;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__characteristic-title {
+    @include fs-16;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--grey);
+  }
+
+  &__characteristic-sublist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__characteristic-subitem {
+    @include fs-16;
+    position: relative;
+    padding-left: 12px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      width: 4px;
+      height: 4px;
+      background-color: var(--grey);
+    }
+  }
+
+  &__price-period-wrapper {
+    display: flex;
+    gap: 48px;
+    margin-bottom: 32px;
+  }
+
+  &__price-title,
+  &__period-title {
+    @include fs-16;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--grey);
+  }
+
+  &__price,
+  &__period {
+    @include fs-16;
+  }
+
+  &__btns-wrapper {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__img {
+    margin: auto;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .service-first {
+    padding-bottom: 48px;
+
+    &__btns-wrapper {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+}

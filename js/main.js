@@ -79,5 +79,7 @@ if (serviceCatItems.length > 8) {
 		serviceCatsBtn.textContent = serviceCatsBtn.textContent === 'Показать еще' ? 'Скрыть' : 'Показать еще';
 	});
 } else {
-	serviceCatsBtn.style.display = 'none';
+	if (serviceCatsBtn) {
+		serviceCatsBtn.style.display = 'none';
+	}
 }

@@ -10,6 +10,7 @@
 @import './components/slick-slider';
 @import './components/mobile-menu';
 @import './components/modal';
+@import './components/lightbox';
 @import './components/accordion';
 @import './components/breadcrumbs';
 
@@ -33,5 +34,10 @@
 
 @import './components/service-category-first';
 @import './components/service-category-list';
-@import './components/service-category-description';
 @import './components/service-category-faq';
+
+@import './components/service-first';
+@import './components/service-description';
+@import './components/service-examples';
+@import './components/service-price';
+@import './components/other-services';

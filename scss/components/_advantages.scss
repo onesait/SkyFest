@@ -3,7 +3,7 @@
   background-color: var(--light-gray);
 
   &__title {
-    margin-bottom: 32px;
+    margin-bottom: 56px;
   }
 
   &__item-wrapper {
@@ -23,13 +23,18 @@
     padding: 96px 0;
     background-color: transparent;
   }
+
+  &--service {
+    padding: 96px 0;
+  }
 }
 
 @media (max-width: 1199px) {
   .advantages {
     padding: 24px 0 0;
 
-    &--services-cat {
+    &--services-cat,
+    &--service{
       padding: 96px 0;
     }
   }
@@ -50,7 +55,8 @@
 
 @media (max-width: 767px) {
   .advantages {
-    &--services-cat {
+    &--services-cat,
+    &--service {
       padding: 48px 0;
     }
 
