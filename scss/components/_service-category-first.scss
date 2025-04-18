@@ -1,0 +1,81 @@
+.service-category-first {
+  position: relative;
+  margin-top: -120px;
+  background: linear-gradient(90deg, #e0e0e0 0%, #fff 100%);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 56vw;
+    background: url("../img/home-page/main-screen-bg-skyfest.png") left/cover no-repeat;
+  }
+
+  &__content {
+    padding: 120px 0 96px;
+  }
+
+  &__text {
+    @include fs-16;
+    margin-bottom: 32px;
+  }
+
+  &__btns-wrapper {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__link {
+    &::after {
+      content: "";
+      transition: .4s ease;
+      margin-left: 8px;
+      width: 24px;
+      height: 24px;
+      background: url("../img/global/chevron-right-24-red.svg");
+    }
+
+    &:hover {
+      &::after {
+        background: url("../img/global/chevron-right-24-white.svg");
+      }
+    }
+  }
+
+  &__img {
+    margin: auto;
+    max-width: 100%;
+    padding-top: 96px;
+  }
+}
+
+@media (max-width: 991px) {
+  .service-category-first {
+    &__img {
+      padding-top: 0;
+      max-width: 50%;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .service-category-first {
+    margin-top: -72px;
+
+    &__content {
+      padding: 72px 0 48px;
+    }
+
+    &__btns-wrapper {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    &__img {
+      padding-top: 0;
+      max-width: 100%;
+    }
+  }
+}

@@ -2,7 +2,6 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 16px;
     margin-bottom: 24px;
     padding: 0;
     list-style: none;
@@ -27,7 +26,6 @@
 
   &__sublist-header {
     position: relative;
-    margin-bottom: 24px;
     padding: 16px 0;
 
     svg {
@@ -49,13 +47,15 @@
   &__sublist {
     display: flex;
     flex-direction: column;
-    gap: 16px;
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
   &__item {
+    border-bottom: 1px solid var(--light-gray);
+    padding: 12px 0;
+
     &--has-children {
       display: flex;
       align-items: center;
@@ -76,6 +76,10 @@
           padding: 0;
         }
       }
+    }
+
+    &:last-child {
+      border-bottom: none;
     }
   }
 

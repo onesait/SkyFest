@@ -56,7 +56,7 @@ button,
   transition: .4s ease;
   border: 1px solid var(--red);
   min-width: 196px;
-  padding: 14px 23px;
+  padding: 14px 22px;
   background-color: transparent;
   font-weight: 500;
   font-size: 16px;
@@ -70,6 +70,20 @@ button,
   &:hover {
     background-color: var(--red);
     color: var(--white);
+  }
+
+  &--secondary {
+    background-color: var(--red);
+    color: var(--white);
+
+    &:visited {
+      color: var(--white);
+    }
+
+    &:hover {
+      background-color: transparent;
+      color: var(--red);
+    }
   }
 }
 
@@ -102,6 +116,14 @@ input {
 
 p {
   margin-bottom: 8px;
+}
+
+ul {
+  padding-left: 18px;
+
+  li::marker {
+    color: var(--grey);
+  }
 }
 
 @media (max-width: 1399px) {

@@ -21,6 +21,19 @@
     font-weight: 500;
     color: var(--grey);
   }
+
+  &--services-cat {
+    margin-bottom: 96px;
+    background-color: var(--light-gray);
+  }
+}
+
+@media (max-width: 767px) {
+  .reviews {
+    &--services-cat {
+      margin-bottom: 48px;
+    }
+  }
 }
 
 @media (max-width: 575px) {

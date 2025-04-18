@@ -1,0 +1,59 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.accordion-item {
+  border: 1px solid var(--light-gray);
+
+  &:has(.accordion-button:not(.collapsed)) {
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+.accordion-button {
+  padding: 23px;
+  font-weight: 600;
+
+  &::after {
+    width: 24px;
+    height: 24px;
+    background: url("../img/global/chevron-down-24-grey.svg");
+  }
+
+  &:hover {
+    background-color: transparent;
+    color: var(--black);
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &:not(.collapsed) {
+    box-shadow: none;
+    background-color: var(--white);
+    color: var(--black);
+
+    &::after {
+      transform: none;
+      background: url("../img/global/chevron-up-24-red.svg");
+    }
+  }
+}
+
+.accordion-body {
+  @include fs-16;
+  padding: 0 24px 24px;
+}
+
+@media (max-width: 575px) {
+  .accordion-button {
+    padding: 15px;
+  }
+
+  .accordion-body {
+    padding: 0 16px 16px;
+  }
+}

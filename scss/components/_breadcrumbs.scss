@@ -1,4 +1,7 @@
 .breadcrumbs {
+  position: relative;
+  z-index: 2;
+
   &__wrapper {
     @include fs-16;
     margin: 0;

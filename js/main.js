@@ -60,3 +60,24 @@ function debounce(func, timeout = 100) {
 
 window.addEventListener('load', markNewLineItems);
 window.addEventListener('resize', debounce(markNewLineItems));
+
+
+const serviceCatsBtn = document.querySelector('.service-category-list__btn');
+const serviceCatItems = document.querySelectorAll('.service-category-list__item');
+
+if (serviceCatItems.length > 8) {
+	const itemsArray = Array.from(serviceCatItems);
+	const hiddenItems = itemsArray.slice(8);
+
+	hiddenItems.forEach(item => item.classList.add('hidden'));
+
+	serviceCatsBtn.style.display = 'inline-flex';
+
+	serviceCatsBtn.addEventListener('click', () => {
+		hiddenItems.forEach(item => item.classList.toggle('hidden'));
+
+		serviceCatsBtn.textContent = serviceCatsBtn.textContent === 'Показать еще' ? 'Скрыть' : 'Показать еще';
+	});
+} else {
+	serviceCatsBtn.style.display = 'none';
+}

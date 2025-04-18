@@ -2,6 +2,10 @@
   padding: 24px 0;
   background-color: var(--light-gray);
 
+  &__title {
+    margin-bottom: 32px;
+  }
+
   &__item-wrapper {
     display: flex;
     align-items: center;
@@ -14,11 +18,20 @@
     font-weight: 500;
     text-wrap: balance;
   }
+
+  &--services-cat {
+    padding: 96px 0;
+    background-color: transparent;
+  }
 }
 
 @media (max-width: 1199px) {
   .advantages {
     padding: 24px 0 0;
+
+    &--services-cat {
+      padding: 96px 0;
+    }
   }
 }
 
@@ -37,6 +50,10 @@
 
 @media (max-width: 767px) {
   .advantages {
+    &--services-cat {
+      padding: 48px 0;
+    }
+
     &__item-text {
       @include fs-16;
       padding-right: 2vw;
@@ -46,6 +63,10 @@
 
 @media (max-width:575px) {
   .advantages {
+    &__title {
+      margin-bottom: 24px;
+    }
+
     &__item-icon {
       width: 36px;
       height: 36px;

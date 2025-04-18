@@ -1,0 +1,13 @@
+.service-category-faq {
+  &__title {
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 575px) {
+  .service-category-faq {
+    &__title {
+      margin-bottom: 24px;
+    }
+  }
+}
