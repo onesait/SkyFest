@@ -62,6 +62,18 @@ window.addEventListener('load', markNewLineItems);
 window.addEventListener('resize', debounce(markNewLineItems));
 
 
+const orderServiceBtn = document.querySelector('.service-first__btn');
+
+if (orderServiceBtn) {
+	orderServiceBtn.addEventListener('click', () => {
+		const title = document.querySelector('h1');
+		const serviceInput = document.querySelector('.order-service-modal__service-input');
+
+		serviceInput.value = title.innerText;
+	});
+}
+
+
 const serviceCatsBtn = document.querySelector('.service-category-list__btn');
 const serviceCatItems = document.querySelectorAll('.service-category-list__item');
 
@@ -83,3 +95,57 @@ if (serviceCatItems.length > 8) {
 		serviceCatsBtn.style.display = 'none';
 	}
 }
+
+
+function handleTabsOverflow() {
+	document.querySelectorAll('.prices-page .tab-content').forEach(pricesPageTabContent => {
+		const list = pricesPageTabContent.querySelector('.nav-tabs');
+		let items, button;
+
+		if (list && list.querySelectorAll('li').length > 0) {
+			items = Array.from(list.querySelectorAll('li'));
+			button = pricesPageTabContent.querySelector('.prices-page__show-btn');
+		} else {
+			return;
+		}
+
+		items.forEach(li => li.classList.remove('hidden'));
+		button.classList.remove('show');
+
+		if (items.length === 0) return;
+
+		const firstRowTop = items[0].offsetTop;
+
+		const firstRowItems = items.filter(li => li.offsetTop === firstRowTop);
+		const secondRowStartIndex = firstRowItems.length;
+
+		if (items.length > secondRowStartIndex) {
+			let hidden = false;
+
+			for (let i = secondRowStartIndex; i < items.length; i++) {
+				items[i].classList.add('hidden');
+				hidden = true;
+			}
+
+			const toHideFromFirstRow = firstRowItems.slice(-2);
+			toHideFromFirstRow.forEach(li => {
+				li.classList.add('hidden');
+				hidden = true;
+			});
+
+			if (hidden) {
+				button.classList.add('show');
+
+				button.addEventListener('click', () => {
+					items.forEach(li => li.classList.remove('hidden'));
+					button.classList.remove('show');
+				}, { once: true });
+			}
+		}
+	});
+}
+
+window.addEventListener('load', handleTabsOverflow);
+window.addEventListener('resize', handleTabsOverflow);
+
+

@@ -1,5 +1,10 @@
 .modal.fade {
   background-color: rgba(33, 33, 33, 0.6);
+
+  &.order-service-modal,
+  &.thanks-modal {
+    z-index: 9999;
+  }
 }
 
 .modal-dialog {
@@ -9,6 +14,10 @@
     height: 100vh;
   }
 
+  .order-service-modal & {
+    min-width: 636px;
+  }
+
   & > * {
     position: relative;
     pointer-events: auto;
@@ -16,22 +25,49 @@
 }
 
 .modal-wrapper {
+  position: relative;
   overflow-y: auto;
-  padding: 48px 24px;
+  padding: 48px;
   background-color: var(--white);
 
   &--mobile-menu {
     height: 100%;
     padding: 120px 0 48px;
   }
+
+  .thanks-modal & {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 96px;
+    background: #fff url("../img/thanks-page/thanks-bg.png") center/cover no-repeat;
+  }
 }
 
 .modal-close-btn {
-  &--menu {
-    border: 0;
-    border-radius: 0;
-    padding: 0;
-    font-weight: 500;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border: 0;
+  border-radius: 0;
+  min-width: 0;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background: url("../img/global/close-24-red.svg");
+  font-weight: 500;
+
+  &:hover {
+    background: url("../img/global/close-24-red.svg");
+  }
+}
+
+@media (max-width: 767px) {
+  .modal-dialog {
+    .order-service-modal & {
+      min-width: calc(100% - 24px);
+    }
   }
 }
 
@@ -47,6 +83,10 @@
 
     &--mobile-menu {
       padding-top: 108px;
+    }
+
+    .thanks-modal & {
+      padding: 48px 24px 24px;
     }
   }
 }

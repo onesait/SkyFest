@@ -1,27 +1,29 @@
-.news-block {
+.portfolio-page {
   &__title {
-    margin-bottom: 36px;
+    margin-bottom: 32px;
   }
 
   &__item-wrapper {
     position: relative;
-    display: flex;
-    height: 362px;
+    display: block;
+    overflow: hidden;
+    height: 350px;
 
     &:hover {
-      .news-block__item-content {
-        min-height: 144px;
+      .portfolio-page {
+        &__item-content {
+          justify-content: flex-end;
+          transform: translateY(0);
+        }
+
+        &__item-link {
+          opacity: 1;
+          visibility: visible;
+          max-height: 100%;
+          padding-top: 16px;
+        }
       }
     }
-  }
-
-  &__item-date {
-    @include fs-12;
-    position: absolute;
-    z-index: 2;
-    top: 13px;
-    left: 24px;
-    color: var(--white);
   }
 
   &__item-img {
@@ -32,26 +34,19 @@
 
   &__item-content {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    top: 0;
     left: 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    transition: .4s ease;
-    min-height: 362px;
+    transform: translateY(calc(100% - 100px));
+    transition: .5s ease;
+    width: 100%;
+    height: 100%;
     padding: 24px;
-    background-color: rgba(33, 33, 33, 0.6);
-  }
-
-  &__item-inner {
-    display: flex;
-    flex-direction: column;
-    min-height: 96px;
+    background-color: rgba(33, 33, 33, .6);
   }
 
   &__item-title {
-    margin-bottom: 16px;
     font-weight: 600;
     color: var(--white);
   }
@@ -61,7 +56,10 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    margin: auto 0 0 auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s ease;
+    max-height: 0;
     font-weight: 500;
     color: var(--white);
 
@@ -71,10 +69,6 @@
       height: 24px;
       background: url("../img/global/chevron-right-24-white.svg") center/contain no-repeat;
     }
-  }
-
-  &__link {
-    margin: 8px auto 0;
   }
 
   &__btn {
@@ -97,49 +91,24 @@
   }
 }
 
-@media (max-width: 1399px) {
-  .news-block {
-    &__item-wrapper {
-      &:hover {
-        .news-block__item-content {
-          min-height: 170px;
-        }
-      }
-    }
-  }
-}
-
 @media (max-width: 575px) {
-  .news-block {
+  .portfolio-page {
     &__title {
       margin-bottom: 24px;
     }
 
     &__item-wrapper {
-      height: 240px;
-
-      &:hover {
-        .news-block__item-content {
-          min-height: 94px;
-        }
-      }
+      height: 200px;
     }
 
     &__item-content {
-      min-height: 240px;
+      transform: translateY(calc(100% - 69px));
       padding: 16px;
-    }
-
-    &__item-inner {
-      min-height: 62px;
-    }
-
-    &__item-title {
-      margin-bottom: 8px;
     }
 
     &__item-link {
       @include fs-12;
+      padding-top: 8px;
 
       &::after {
         width: 16px;
@@ -147,7 +116,6 @@
       }
     }
 
-    &__link,
     &__btn {
       margin-top: 0;
     }

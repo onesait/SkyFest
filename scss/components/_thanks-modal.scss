@@ -1,0 +1,11 @@
+.thanks-modal {
+  &__img {
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    @include fs-16;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+}

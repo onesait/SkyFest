@@ -1,0 +1,151 @@
+.prices-page {
+  &__text {
+    margin-bottom: 48px;
+
+    a {
+      text-decoration: underline;
+      color: var(--red);
+    }
+  }
+
+  &__show-btn {
+    @include fs-18;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    border: 0;
+    min-width: 0;
+    padding: 0;
+    background-color: transparent;
+    font-weight: 400;
+    color: var(--red);
+
+    &:hover {
+      background-color: transparent;
+      color: var(--black);
+    }
+
+    &.show {
+      display: inline-flex;
+    }
+  }
+
+  &__table-wrapper {
+    margin-bottom: 48px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__table-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  &__table-title {
+    font-weight: 500;
+  }
+
+  &__table-period {
+    @include fs-16;
+    color: var(--grey);
+  }
+
+  &__table {
+    margin: 0;
+
+    tr {
+      border-color: var(--grey);
+    }
+
+    th {
+      @include fs-16;
+      border-color: var(--grey);
+      min-width: 305px;
+      padding: 16px;
+      background-color: var(--light-gray);
+      font-weight: 400;
+
+      &:last-child {
+        white-space: nowrap;
+      }
+    }
+
+    td {
+      @include fs-16;
+      border-color: var(--grey);
+      min-width: 305px;
+      padding: 16px;
+
+      &:last-child {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &__inner-text {
+    margin: 16px 0 32px;
+  }
+}
+
+@media (max-width: 991px) {
+  .prices-page {
+    th,
+    td {
+      &:last-child {
+        min-width: 220px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .prices-page {
+    th,
+    td {
+      &:last-child {
+        min-width: 180px;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .prices-page {
+    &__text {
+      margin-bottom: 24px;
+    }
+
+    &__show-btn {
+      @include fs-14;
+    }
+
+    &__table-wrapper {
+      margin-bottom: 24px;
+    }
+
+    &__table-period {
+      @include fs-12;
+    }
+
+    th,
+    td {
+      @include fs-14;
+      min-width: 220px;
+      padding: 12px;
+
+      &:last-child {
+        min-width: 140px;
+      }
+    }
+
+    &__inner-text {
+      margin: 16px 0 24px;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.order-service-modal {
+  &__text {
+    margin-bottom: 32px;
+  }
+
+  &__service-input {
+    display: none;
+  }
+
+  &__policy {
+    @include fs-14;
+    color: var(--grey);
+
+    a {
+      color: var(--red);
+
+      &:hover {
+        color: var(--black);
+      }
+    }
+  }
+
+  &__btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .order-service-modal {
+    &__text {
+      margin-bottom: 16px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.article-page {
+  &__date {
+    @include fs-12;
+    margin-bottom: 32px;
+  }
+
+  &__content {
+    @include fs-16;
+
+    p {
+      margin-bottom: 24px;
+    }
+
+    li {
+      margin-bottom: 16px;
+
+      strong {
+        display: inline-block;
+        margin-bottom: 8px;
+      }
+    }
+  }
+}

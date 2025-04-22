@@ -5,6 +5,10 @@
     margin-bottom: 32px;
   }
 
+  &__item {
+    margin-bottom: 32px;
+  }
+
   &__item-wrapper {
     display: flex;
     align-items: center;
@@ -22,13 +26,25 @@
   &__arrows {
     display: flex;
     gap: 24px;
-    margin: 32px 0 0 auto;
+    margin-left: auto;
+  }
+
+  &--about-page {
+    background-color: var(--white);
+
+    .clients__item-wrapper {
+      box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+    }
   }
 }
 
 @media (max-width: 767px) {
   .clients {
     &__title {
+      margin-bottom: 24px;
+    }
+
+    &__item {
       margin-bottom: 24px;
     }
   }

@@ -1,0 +1,98 @@
+.tab-pane {
+  position: relative;
+}
+
+.nav-tabs {
+  display: flex;
+  gap: 16px 24px;
+  margin-bottom: 30px;
+  border-bottom: 0;
+}
+
+.nav-item {
+  .prices-page & {
+    &.hidden {
+      display: none;
+    }
+  }
+}
+
+.nav-link {
+  @include fs-18;
+  margin: 0 !important;
+  border: 1px solid var(--red) !important;
+  border-radius: 0 !important;
+  min-width: 0;
+  padding: 11px 23px;
+  color: var(--red);
+
+  &:hover {
+    color: var(--white);
+  }
+
+  &.active {
+    background-color: var(--red) !important;
+    color: var(--white) !important;
+  }
+}
+
+.tab-content {
+  .nav-tabs {
+    gap: 8px 24px;
+    margin-bottom: 48px;
+  }
+
+  .nav-link {
+    border: 0 !important;
+    padding: 0;
+    background-color: transparent;
+    color: var(--grey);
+
+    &.active {
+      border-bottom: 1px solid var(--black) !important;
+      background-color: transparent !important;
+      color: var(--black) !important;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-tabs {
+    gap: 16px;
+  }
+
+  .nav-item {
+    width: calc(50% - 8px);
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: 11px 10px;
+  }
+
+  .tab-content {
+    .nav-tabs {
+      gap: 8px 16px;
+    }
+
+    .nav-item {
+      width: auto;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .nav-item {
+    width: 100%;
+  }
+
+  .tab-content {
+    .nav-tabs {
+      margin-bottom: 24px;
+    }
+
+    .nav-link {
+      @include fs-14;
+    }
+  }
+}
