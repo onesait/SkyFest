@@ -35,5 +35,10 @@
     &__title {
       margin-bottom: 24px;
     }
+
+    th,
+    td {
+      @include fs-14;
+    }
   }
 }

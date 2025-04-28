@@ -892,6 +892,8 @@ ul li::marker {
 
 @media (max-width: 575px) {
   .breadcrumbs__wrapper {
+    font-size: 14px;
+    line-height: 129%;
     padding: 24px 0;
   }
 }
@@ -2207,6 +2209,11 @@ ul li::marker {
   .service-price__title {
     margin-bottom: 24px;
   }
+  .service-price th,
+  .service-price td {
+    font-size: 14px;
+    line-height: 129%;
+  }
 }
 .other-services__title {
   margin-bottom: 32px;
@@ -2383,7 +2390,7 @@ ul li::marker {
     margin-bottom: 4px;
   }
   .about-page__item-description {
-    font-size: 10px;
+    font-size: 12px;
     line-height: 150%;
   }
 }
